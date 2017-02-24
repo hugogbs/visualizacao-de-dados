@@ -37,6 +37,7 @@ d3.json("https://rawgit.com/hugogbs/visualizacao-de-dados/master/data/letras.jso
       .sum(function(d) { return d.value; });
 
   var node = svg.selectAll(".node")
+    .sort( function(a, b) { return  -1;} )
     .data(pack(root).leaves())
     .enter().append("g")
       .attr("class", "node")
