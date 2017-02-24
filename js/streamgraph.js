@@ -1,4 +1,4 @@
-chart("https://raw.githubusercontent.com/arthurlustosa/visualizacao-de-dados/master/data/data_streamgraph.csv", "blue");
+chart("https://raw.githubusercontent.com/hugogbs/visualizacao-de-dados/master/data/data_streamgraph.csv", "blue");
 
 var datearray = [];
 var colorrange = [];
