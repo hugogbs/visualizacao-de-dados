@@ -9,7 +9,7 @@ var svg = d3.select("#chart")
 
 var format = d3.format(",d");
 
-var color = d3.scaleOrdinal(['#1f77b4']);
+var color = d3.scaleOrdinal(['#144c73', '#1b699e','#2385ca', '#419ede']);
 //var color = d3.scaleOrdinal(['#bcbd22', '#17becf']);
 //var color = d3.scaleQuantize(d3.schemeCategory10);
 
@@ -48,7 +48,7 @@ d3.json("https://rawgit.com/hugogbs/visualizacao-de-dados/master/data/letras.jso
       .transition().delay(500).duration(2000)
       .attr("id", function(d) { return d.data.id; })
       .attr("r", function(d) { return d.r; })
-      .style("fill", function(d) { return color(d.id); });
+      .style("fill", function(d) { return color(d.data.class); });
 
   node.append("clipPath")
       .attr("id", function(d) { return "clip-" + d.data.id; })
