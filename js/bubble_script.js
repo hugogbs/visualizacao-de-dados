@@ -15,7 +15,7 @@ var color = d3.scaleOrdinal(['#1f77b4']);
 
 var pack = d3.pack()
     .size([width, width])
-    .padding(2.5);
+    .padding(1.5);
 
 d3.json("https://rawgit.com/hugogbs/visualizacao-de-dados/master/data/letras.json", function(error, classes) {
   if (error) throw error;
@@ -35,7 +35,7 @@ d3.json("https://rawgit.com/hugogbs/visualizacao-de-dados/master/data/letras.jso
 
   var root = d3.hierarchy({children: classes})
       .sum(function(d) { return d.value; })
-      .sort();
+      .sort( function(a, b) { return -(a.value - b.value); });
 
   var node = svg.selectAll(".node")
     .sort( function(a, b) { return  -1;} )
