@@ -48,7 +48,7 @@ d3.json("https://rawgit.com/hugogbs/visualizacao-de-dados/master/data/letras.jso
       .transition().delay(500).duration(2000)
       .attr("id", function(d) { return d.data.id; })
       .attr("r", function(d) { return d.r; })
-      .style("fill", function(d) { return color(d.data.class); });
+      .style("fill", function(d) { return color(d.frequency); });
 
   node.append("clipPath")
       .attr("id", function(d) { return "clip-" + d.data.id; })
