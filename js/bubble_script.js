@@ -14,7 +14,6 @@ var color = d3.scaleOrdinal(['#1f77b4']);
 //var color = d3.scaleQuantize(d3.schemeCategory10);
 
 var pack = d3.pack()
-    .sort()
     .size([width, width])
     .padding(1.5);
 
