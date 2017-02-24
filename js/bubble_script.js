@@ -9,11 +9,12 @@ var svg = d3.select("#chart")
 
 var format = d3.format(",d");
 
-var color = d3.scaleOrdinal(['#1f77b4', '#ff7f0e', '#2ca02c', '#e377c2', '#9467bd', '#8c564b', '#d62728', '#7f7f7f', '#bcbd22', '#17becf']);
+var color = d3.scaleOrdinal(['#1f77b4']);
 //var color = d3.scaleOrdinal(['#bcbd22', '#17becf']);
 //var color = d3.scaleQuantize(d3.schemeCategory10);
 
 var pack = d3.pack()
+    .sort()
     .size([width, width])
     .padding(1.5);
 
